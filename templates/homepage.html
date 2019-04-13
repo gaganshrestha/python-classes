@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% from "show_top_menu.html" import show_top_menu %}
+
+
+{% block title %} Homepage {% endblock %}
+
+{% block top_menu %}
+         {{ show_top_menu(user) }}
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="main">
+
+    <center><h5><br><br>Welcome to the Beginners Python Immersion Course. Let's get started.</h5>
+
+    <font size="4">Click <a href={{ url_for('displayVideo', videoID='fvhNadKjE8g') }}>here</a> or the <b>Tasks</b> link in the top navigation bar to begin the course.</font>
+    
+    </center>
+
+
+  </div>
+
+{% endblock %}

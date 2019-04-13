@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "show_chapters.html" import show_chapters %}
+{% from "show_top_menu.html" import show_top_menu %}
+
+{% block title %} Exercises {% endblock %}
+
+
+{% block top_menu %}
+         {{ show_top_menu(user) }}
+{% endblock %}
+
+
+{% block nav %}
+    {{ show_chapters() }}   
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="main">
+
+    <h5><br>Answer the exercises in the page below and submit to your trainer.
+    	<br>
+    	<span class="notbold"><font size="3">Use the following link to share your code to your trainer: <a href="{{ googleURL }}" target="_blank">Google Form</a></font>
+    	</span>
+    </h5>    
+    
+    
+ 	<div class="iframe-container">
+    	<iframe src="https://www.py4e.com/html3/{{ exerciseID }}" name="iframe_a"></iframe>
+    </div>
+
+  </div>
+
+  
+
+{% endblock %}

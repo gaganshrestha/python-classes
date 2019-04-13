@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %} {% endblock %}</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type=text/css href="{{ url_for('static', filename='style.css') }}" >
+   
+
+</head>
+<body>
+
+<div class="navbar">
+  {% block top_menu %} {% endblock %}
+</div>
+
+
+<div class="sidenav">
+  {% block nav %} {% endblock %}
+</div>
+
+{% block body %} {% endblock %}
+   
+</body>
+</html> 

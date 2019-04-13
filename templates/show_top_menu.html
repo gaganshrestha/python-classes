@@ -1,0 +1,13 @@
+{% macro show_top_menu(user) %}
+
+    {% if user %}
+        <a href="{{ url_for('homepage') }}">Home</a>
+        <a href="{{ url_for('displayVideo', videoID='fvhNadKjE8g') }}">Tasks</a>
+        <a href="{{ url_for('logout') }}" style="float: right">&nbsp;&nbsp;&nbsp;Logout&nbsp;&nbsp;&nbsp;</a>
+    {% endif %}
+
+    {% if not user %}
+        <a href="{{ url_for('index') }}">Login</a>        
+    {% endif %}
+
+{% endmacro %}
