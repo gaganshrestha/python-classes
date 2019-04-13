@@ -12,7 +12,7 @@ def get_current_user():
 
 	if 'user' in session:
 		user = session['user']
-		if user in ["gagan", "engramar", "div", "gitanjali", "sarwar", "paul", "jen", "hieu", "tim", "scott", "geoff"]:
+		if user in ["Gagan", "Engramar", "Div", "Gitanjali", "Sarwar", "Paul", "Jen", "Hieu", "Tim", "Scott", "Geoff"]:
 			current_user = user
 
 
@@ -39,7 +39,7 @@ def login():
 		name = request.form['name']
 		password = request.form['password']
 		
-		if name in ["gagan", "engramar", "div", "gitanjali", "sarwar", "paul", "jen", "hieu", "tim", "scott", "geoff"]:
+		if name in ["Gagan", "Engramar", "Div", "Gitanjali", "Sarwar", "Paul", "Jen", "Hieu", "Tim", "Scott", "Geoff"]:
 
 			if password == "python":
 				session['user'] = name
