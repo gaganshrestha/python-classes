@@ -39,7 +39,7 @@ def login():
 		name = request.form['name']
 		password = request.form['password']
 		
-		if name in ["gagan", "rakesh"]:
+		if name in ["gagan", "engramar", "div", "gitanjali", "sarwar", "paul", "jen", "hieu", "tim", "scott", "geoff"]:
 
 			if password == "python":
 				session['user'] = name
