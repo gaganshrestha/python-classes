@@ -12,7 +12,7 @@ def get_current_user():
 
 	if 'user' in session:
 		user = session['user']
-		if user in ["gagan", "rakesh"]:
+		if user in ["gagan", "engramar", "div", "gitanjali", "sarwar", "paul", "jen", "hieu", "tim", "scott", "geoff"]:
 			current_user = user
 
 
