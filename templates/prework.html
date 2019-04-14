@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% from "show_chapters.html" import show_chapters %}
+{% from "show_top_menu.html" import show_top_menu %}
+
+{% block title %} Pre-work {% endblock %}
+
+
+{% block top_menu %}
+         {{ show_top_menu(user) }}
+{% endblock %}
+
+
+{% block nav %}
+    {{ show_chapters() }}   
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="main">
+
+    <h5><br>Please install the following components needed for the course.
+    	<br><br>
+    	<span class="notbold"><font size="3">Click the links below to install the components.</font>
+    	</span>
+    </h5>    
+    
+    <ol>
+
+    <font size="3">
+      <li><a href="https://www.python.org/downloads/" target="_blank">Install Python 3</a></li>
+      <li><a href="https://www.jetbrains.com/pycharm/download/" target="_blank">Install PyCharm Community Edition</a></li>
+      <li><a href="https://git-scm.com/downloads" target="_blank">Install Git</a></li>
+    </font>
+
+    </ol>
+
+ 	</div>
+
+  
+
+{% endblock %}

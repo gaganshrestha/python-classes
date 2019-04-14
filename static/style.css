@@ -45,6 +45,7 @@ body {
   list-style-type: none;
 }
 
+/* Links inside the side navbar */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -53,12 +54,12 @@ body {
   display: block;
 }
 
-
+/* Change link color once visited */
 .sidenav a:visited {
   color: #33FCFF;
 }
 
-
+/* Change link color on mouse-over */
 .sidenav a:hover {
   color: #E9FF33;
 }
@@ -102,6 +103,32 @@ body {
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
+
+/* Links inside the main frame */
+.main a {
+  
+  text-decoration: underline;
+  font-size: 18px;
+  color: #0000ff;
+  
+}
+
+/* Change link color once visited */
+.main a:visited {
+  color: #006400;
+}
+
+/* Change background on mouse-over */
+.main a:hover {
+  color: #A52A2A;
+}
+
+
+.main a:active {
+  color: #E74C3C;
+}
+
+
 
 .notbold{
     font-weight:normal
