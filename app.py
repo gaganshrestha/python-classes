@@ -104,6 +104,19 @@ def displayExercise(exerciseID):
 	return render_template('exercise.html', user=user, exerciseID=exerciseID, googleURL=googleURL)
 
 
+
+@app.route('/prework', methods=['GET'])
+def prework():
+	user = get_current_user()
+
+	if not user:
+		return redirect(url_for('login'))
+
+
+	return render_template('prework.html', user=user)
+
+
+
 @app.route('/logout')
 def logout():
 	session.pop('user',None)
