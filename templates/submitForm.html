@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from "show_chapters.html" import show_chapters %}
+{% from "show_top_menu.html" import show_top_menu %}
+
+{% block title %} Submit Form {% endblock %}
+
+
+{% block top_menu %}
+         {{ show_top_menu(user) }}
+{% endblock %}
+
+
+{% block nav %}
+    {{ show_chapters() }}   
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="main">
+
+    <h5><br>Submit the form below.
+    	
+    </h5>    
+    
+    
+ 	<div class="iframe-container">
+    	<iframe src="{{ googleURL }}" name="iframe_a"></iframe>
+  </div>
+
+  </div>
+
+  
+
+{% endblock %}

@@ -105,6 +105,19 @@ def displayExercise(exerciseID):
 
 
 
+@app.route('/submitExercise/<formID>', methods=['GET'])
+def submitExercise(formID):
+	user = get_current_user()
+
+	if not user:
+		return redirect(url_for('login'))
+
+
+	googleURL = "https://docs.google.com/forms/d/e/" + formID + "/viewform?embedded=true"
+	return render_template('submitForm.html', user=user, googleURL=googleURL)
+
+
+
 @app.route('/prework', methods=['GET'])
 def prework():
 	user = get_current_user()
