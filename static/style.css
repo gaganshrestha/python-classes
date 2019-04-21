@@ -52,6 +52,7 @@ body {
   font-size: 15px;
   color: #ffffff;
   display: block;
+  text-align: left;
 }
 
 /* Change link color once visited */
@@ -61,12 +62,14 @@ body {
 
 /* Change link color on mouse-over */
 .sidenav a:hover {
-  color: #E9FF33;
+  color: black;
+  background: #ddd;
 }
 
 
 .sidenav a:active {
-  color: #E74C3C;
+  color: black;
+  background: #ddd;
 }
 
 
