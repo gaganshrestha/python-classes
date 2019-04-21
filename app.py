@@ -14,8 +14,8 @@ class Users(db.Model):
 	__tablename__ = "users"
 
 	user_id = db.Column(db.Integer, primary_key=True)
-	name = db.Column(db.String(45), nullable=false)
-	password = db.Column(db.String(45), nullable=false)
+	name = db.Column(db.String(45), nullable=False)
+	password = db.Column(db.String(45), nullable=False)
 
 
 
