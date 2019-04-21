@@ -9,7 +9,8 @@
     {% endif %}
 
     {% if not user %}
-        <a href="{{ url_for('index') }}">Login</a>        
+        <a href="{{ url_for('index') }}">Login</a>       
+        <a href="{{ url_for('register') }}">Register</a>  
     {% endif %}
 
 {% endmacro %}
