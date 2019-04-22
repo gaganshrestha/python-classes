@@ -3,7 +3,7 @@ import sqlite3
 import os
 
 
-'''
+
 app = Flask(__name__)
 
 #Settings for pythonanywhere MySQL DB
@@ -36,7 +36,7 @@ app.config['SECRET_KEY'] = os.urandom(24)
 
 
 
-
+'''
 '''
 def connect_db():
 	sql = sqlite3.connect('/Users/gaganshrestha/Projects/TrainingFramework/TrainingDetails.db')
