@@ -24,25 +24,37 @@
                     <label for="inputName"><font size="4" align="left">Name</font></label>
                     <div>
                       {% if usererror %}
-                      <div><font size="2" color="red">{{ usererror }}</font></div>
+                      <div class="error_text">{{ usererror }}</div>
                       {% endif %}
-                      <input type="text" name="name" id="inputName" placeholder="Enter your username" required>
+                      <input class="text_box" type="text" name="name" id="inputName" placeholder="Enter your username" required>
+                      <br>
+                     
+                      <br>
                     </div>
                   </div>
                   <div>
                     <label for="inputPassword"><font size="4" align="left">Password</font></label>
                     <div>
                       {% if passworderror %}
-                      <div><font size="2" color="red">{{ passworderror }}</font></div>
+                      <div class="error_text">{{ passworderror }}</div>
                       {% endif %}
-                      <input type="password" name="password" id="inputPassword" placeholder="Enter your password" required>
+                      <input class="text_box" type="password" name="password" id="inputPassword" placeholder="Enter your password" required>
                     </div>
                   </div>
-                  <div>
+                  
+                  <br>
+
                     <div>
-                      <button class="button-style" type="submit">Login</button>
+                      <button type="submit">Login</button>
                     </div>
+
+                    <br>
+                    
+                  
+                   <div class="hint_text">
+                        New user? <a href="{{ url_for('register') }}" style="font-size: 16px;">Register</a>
                   </div>
+
                 </fieldset>
     </form>
   

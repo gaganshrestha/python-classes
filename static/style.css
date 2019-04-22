@@ -138,10 +138,35 @@ body {
 }​
 
 
-.button-style {
-  width: 500px;
-  height: 500px;
+.button-style{
+  width: 1000px;
+  height: 1000px;
+  font-size: 25px;
+  padding: 10px 20px;
 
+}
+
+
+button[type=submit]{
+  
+  font-size: 18px;
+}
+
+
+.hint_text {
+  font-size: 18px;
+}
+
+.error_text{  
+  font-size: 15px;
+  color: red;
+}
+
+
+.text_box{
+  height: 25px;
+  width: 200px;
+  font-size: 15px;
 }
 
 
