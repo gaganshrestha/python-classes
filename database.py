@@ -3,9 +3,10 @@ import sqlite3
 import os
 
 
-
+'''
 app = Flask(__name__)
 
+#Settings for pythonanywhere MySQL DB
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
     username="shresthagagan",
     password="mysql123",
@@ -36,7 +37,7 @@ app.config['SECRET_KEY'] = os.urandom(24)
 
 
 
-
+'''
 def connect_db():
 	sql = sqlite3.connect('/Users/gaganshrestha/Projects/TrainingFramework/TrainingDetails.db')
 	sql.row_factory = sqlite3.Row

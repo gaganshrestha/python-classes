@@ -17,29 +17,33 @@
     <center><h5><br><br>Please register</h5> </center>
 
  
-       {% if error %}
-          <div><font size="3" color="red">{{ error }}</font></div>
-       {% endif %}
+       
 
       <form method="POST" action="{{ url_for('register') }}">
                 <fieldset>
                   <div>
                     <label for="inputName"><font size="4" align="left">Name</font></label>
+                    {% if error %}
+                      <div class="error_text">{{ error }}</div>
+                    {% endif %}
                     <div>
-                              <input type="text" name="name" id="inputName" placeholder="Enter username" required>
+                              <input class="text_box" type="text" name="name" id="inputName" placeholder="Enter username" required>
                     </div>
                   </div>
+                  <br>
                   <div>
                     <label for="inputPassword"><font size="4" align="left" required>Password</font></label>
                     <div>
-                      <input type="password" name="password" id="inputPassword" placeholder="Enter password" required="">
+                      <input class="text_box" type="password" name="password" id="inputPassword" placeholder="Enter password" required="">
                     </div>
                   </div>
-                  <div>
+                  
+                    <br>
+
                     <div>
-                      <button class="button-style" type="submit">Submit</button>
+                      <button type="submit">Submit</button>
                     </div>
-                  </div>
+                  
                 </fieldset>
     </form>
   
