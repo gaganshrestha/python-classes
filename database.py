@@ -3,6 +3,20 @@ import sqlite3
 import os
 
 
+
+app = Flask(__name__)
+SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
+    username="root",
+    password="mysql123",
+    hostname="localhost",
+    databasename="trainingdetails",
+)
+app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
+
+app.config['SECRET_KEY'] = os.urandom(24)
+
+
+'''
 app = Flask(__name__)
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
     username="gaganshrestha",
@@ -29,5 +43,5 @@ def get_db():
 	if not hasattr(g, 'sqlite_db'):
 		g.sqlite_db = connect_db()
 	return g.sqlite_db
-
+'''
 

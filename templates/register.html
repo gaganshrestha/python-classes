@@ -18,7 +18,7 @@
 
  
        {% if error %}
-          <div><font size="2" color="red">{{ error }}</font>></div>
+          <div><font size="3" color="red">{{ error }}</font></div>
        {% endif %}
 
       <form method="POST" action="{{ url_for('register') }}">
@@ -26,13 +26,13 @@
                   <div>
                     <label for="inputName"><font size="4" align="left">Name</font></label>
                     <div>
-                              <input type="text" name="name" id="inputName" placeholder="Username" required>
+                              <input type="text" name="name" id="inputName" placeholder="Enter username" required>
                     </div>
                   </div>
                   <div>
                     <label for="inputPassword"><font size="4" align="left" required>Password</font></label>
                     <div>
-                      <input type="password" name="password" id="inputPassword" placeholder="Password" required="">
+                      <input type="password" name="password" id="inputPassword" placeholder="Enter password" required="">
                     </div>
                   </div>
                   <div>
