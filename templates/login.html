@@ -14,7 +14,7 @@
 
   <div class="main">
 
-    <center><h5><br><br>Welcome to the Beginners Python Immersion Course <p>Provide your login details and get started.</h5> </center>
+    <center><h5><br><br>Welcome to the Beginners Python Immersion Course <p><font size="4">Provide your login details and get started.</font></h5> </center>
 
  
 
@@ -26,7 +26,7 @@
                       {% if usererror %}
                       <div><font size="2" color="red">{{ usererror }}</font></div>
                       {% endif %}
-                      <input type="text" name="name" id="inputName" placeholder="Username" required>
+                      <input type="text" name="name" id="inputName" placeholder="Enter your username" required>
                     </div>
                   </div>
                   <div>
@@ -35,7 +35,7 @@
                       {% if passworderror %}
                       <div><font size="2" color="red">{{ passworderror }}</font></div>
                       {% endif %}
-                      <input type="password" name="password" id="inputPassword" placeholder="Password" required>
+                      <input type="password" name="password" id="inputPassword" placeholder="Enter your password" required>
                     </div>
                   </div>
                   <div>
