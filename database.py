@@ -5,6 +5,24 @@ import os
 
 
 app = Flask(__name__)
+
+SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
+    username="shresthagagan",
+    password="mysql123",
+    hostname="shresthagagan.mysql.pythonanywhere-services.com",
+    databasename="shresthagagan$trainingdetails",
+)
+app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
+app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config['SECRET_KEY'] = os.urandom(24)
+
+
+
+'''
+app = Flask(__name__)
+
+#Settings for local MySQL DB
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
     username="root",
     password="mysql123",
@@ -12,21 +30,6 @@ SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostnam
     databasename="trainingdetails",
 )
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
-
-app.config['SECRET_KEY'] = os.urandom(24)
-
-
-'''
-app = Flask(__name__)
-SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
-    username="gaganshrestha",
-    password="mysql123",
-    hostname="gaganshrestha.mysql.pythonanywhere-services.com",
-    databasename="gaganshrestha$trainingdetails",
-)
-app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
-app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config['SECRET_KEY'] = os.urandom(24)
 
 
