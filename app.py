@@ -23,6 +23,7 @@ def load_user(user_id):
 
 
 
+
 @app.route('/register', methods=['POST','GET'])
 def register():
 	
@@ -42,6 +43,7 @@ def register():
 		return redirect(url_for('index'))
 
 	return render_template('register.html')
+
 
 
 
@@ -92,8 +94,6 @@ def index():
 
 
 
-
-
 @app.route('/home')
 @login_required
 def homepage():
@@ -103,6 +103,8 @@ def homepage():
 		return redirect(url_for('login'))
 	
 	return render_template('homepage.html', user=current_user.name) 
+
+
 
 
 
@@ -119,32 +121,39 @@ def displayVideo(videoID):
 	return render_template('chapter.html', user=current_user.name, videoID=videoID)
 
 
-@app.route('/exercise/<exerciseID>', methods=['GET'])
+
+
+
+@app.route('/exercise/<exerciseID>/<chapter>/', methods=['GET'])
 @login_required
-def displayExercise(exerciseID):
+def displayExercise(exerciseID, chapter):
 	
 
 	if not current_user.is_authenticated:
 
 		return redirect(url_for('login'))
 
-
-	googleURL = "href='https://docs.google.com/forms/d/1uCDu6JzQXSm6bftqwtqsLEcnpASvUTlz-bGFUbucvNI'"
 	
-	return render_template('exercise.html', user=current_user.name, exerciseID=exerciseID, googleURL=googleURL)
+	return render_template('exercise.html', user=current_user.name, exerciseID=exerciseID, chapter=chapter)
 
 
 
-@app.route('/submitExercise/<formID>', methods=['GET'])
+
+
+
+@app.route('/submitExercise/<formID>/<chapter>', methods=['GET'])
 @login_required
-def submitExercise(formID):
+def submitExercise(formID, chapter):
 	
 	if not current_user.is_authenticated:
 		return redirect(url_for('login'))
 
 
 	googleURL = "https://docs.google.com/forms/d/e/" + formID + "/viewform?embedded=true"
-	return render_template('submitForm.html', user=current_user.name, googleURL=googleURL)
+	return render_template('submitForm.html', user=current_user.name, googleURL=googleURL, chapter=chapter)
+
+
+
 
 
 
@@ -161,6 +170,9 @@ def prework():
 
 
 
+
+
+
 @app.route('/logout')
 @login_required
 def logout():
@@ -168,6 +180,8 @@ def logout():
 	logout_user()
 	
 	return redirect(url_for('index'))
+
+
 
 
 

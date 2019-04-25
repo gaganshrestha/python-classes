@@ -2,6 +2,7 @@ from flask import Flask,g
 import sqlite3
 import os
 
+'''
 
 
 app = Flask(__name__)
@@ -36,7 +37,6 @@ app.config['SECRET_KEY'] = os.urandom(24)
 
 
 
-'''
 '''
 def connect_db():
 	sql = sqlite3.connect('/Users/gaganshrestha/Projects/TrainingFramework/TrainingDetails.db')
