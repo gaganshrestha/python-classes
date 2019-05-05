@@ -9,22 +9,33 @@
 
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type=text/css href="{{ url_for('static', filename='style.css') }}" >
+    
    
 
 </head>
 <body>
 
+
+
+
 <div class="navbar">
   {% block top_menu %} {% endblock %}
 </div>
 
+ 
 
 <div class="sidenav">
+
   {% block nav %} {% endblock %}
+
 </div>
 
+
+
 {% block body %} {% endblock %}
+
    
 </body>
 </html> 

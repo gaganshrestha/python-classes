@@ -1,11 +1,10 @@
 {% macro show_chapters() %}
-
  
   <ul style="list-style-type:square"> 
 
     <li>Pre-work
         <br><br>
-        <a href="{{ url_for('prework') }}">Installations</a>
+        <a href="{{ url_for('prework', chapter_name='prework') }}">Installations</a>
         <br>      
       
     </li>
@@ -14,12 +13,12 @@
     <li>Task 1
 
        <br><br>       
-        <a href="{{ url_for('displayVideo', videoID='fvhNadKjE8g') }}">Chapter 1 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='VQZTZsXk8sA') }}">Chapter 1 (Part 2)</a>
-        <a href="{{ url_for('displayVideo', videoID='LLzFNlCjTSo') }}">Chapter 1 (Part 3)</a>
-        <a href="{{ url_for('displayVideo', videoID='gsry2SYOFCw') }}">Chapter 1 (Part 4)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='01-intro', chapter='1') }}">Chapter 1 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSfsgNjul147SdWL6g2-9EdEBn_GI8-ONPaStrmbRtBXRrw4HA', chapter='1') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='fvhNadKjE8g', chapter_name='C1P1') }}"><img>Chapter 1 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='VQZTZsXk8sA', chapter_name='C1P2') }}">Chapter 1 (Part 2)</a>
+        <a href="{{ url_for('displayVideo', videoID='LLzFNlCjTSo', chapter_name='C1P3') }}">Chapter 1 (Part 3)</a>
+        <a href="{{ url_for('displayVideo', videoID='gsry2SYOFCw', chapter_name='C1P4') }}">Chapter 1 (Part 4)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='01-intro', chapter='1', chapter_name='C1S') }}">Chapter 1 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSfsgNjul147SdWL6g2-9EdEBn_GI8-ONPaStrmbRtBXRrw4HA', chapter='1', chapter_name='C1TS') }}">Task Submission Form</a>
         <br> 
 
       
@@ -29,10 +28,10 @@
   <li> Task 2
       
         <br><br>
-        <a href="{{ url_for('displayVideo', videoID='7KHdV6FSpo8') }}">Chapter 2 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='kefrGMAglGs') }}">Chapter 2 (Part 2)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='02-variables', chapter='2') }}">Chapter 2 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSeTG7sSO4fazbp1xI1ZeJG6OLNADmnUgKBOxqOwQHSzJN4Ocw', chapter='2') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='7KHdV6FSpo8', chapter_name='C2P1') }}">Chapter 2 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='kefrGMAglGs', chapter_name='C2P2') }}">Chapter 2 (Part 2)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='02-variables', chapter='2', chapter_name='C2S') }}">Chapter 2 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSeTG7sSO4fazbp1xI1ZeJG6OLNADmnUgKBOxqOwQHSzJN4Ocw', chapter='2', chapter_name='C2TS') }}">Task Submission Form</a>
         <br> 
         
 
@@ -42,10 +41,10 @@
   <li> Task 3
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='2aA3VBdcl6A') }}">Chapter 3 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='OczkNrHPBps') }}">Chapter 3 (Part 2)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='03-conditional', chapter='3') }}">Chapter 3 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSekPb4QRem9sDlkI1DWNDRIUjFSK4eUspITxWky7xPQrCJkMQ', chapter='3') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='2aA3VBdcl6A', chapter_name='C3P1') }}">Chapter 3 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='OczkNrHPBps', chapter_name='C3P2') }}">Chapter 3 (Part 2)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='03-conditional', chapter='3', chapter_name='C3S') }}">Chapter 3 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSekPb4QRem9sDlkI1DWNDRIUjFSK4eUspITxWky7xPQrCJkMQ', chapter='3', chapter_name='C3TS') }}">Task Submission Form</a>
         <br> 
       
   </li>
@@ -54,10 +53,10 @@
   <li> Task 4
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='5Kzw-0-DQAk') }}">Chapter 4 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='AJVNYRqn8kM') }}">Chapter 4 (Part 2)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='04-functions', chapter='4') }}">Chapter 4 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSeczd5IN0kOaPHSTI59m9ZzWOnPnu7r0Qzet2H0Z-OLe61a5w', chapter='4') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='5Kzw-0-DQAk', chapter_name='C4P1') }}">Chapter 4 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='AJVNYRqn8kM', chapter_name='C4P2') }}">Chapter 4 (Part 2)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='04-functions', chapter='4', chapter_name='C4S') }}">Chapter 4 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSeczd5IN0kOaPHSTI59m9ZzWOnPnu7r0Qzet2H0Z-OLe61a5w', chapter='4', chapter_name='C4TS') }}">Task Submission Form</a>
         <br> 
 
   </li>
@@ -66,12 +65,12 @@
   <li>Task 5
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='FzpurxjwmsM') }}">Chapter 5 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='5QDrj5ogPYc') }}">Chapter 5 (Part 2)</a>
-        <a href="{{ url_for('displayVideo', videoID='xsavQp8hd78') }}">Chapter 5 (Part 3)</a>
-        <a href="{{ url_for('displayVideo', videoID='yjlMMwf9Y5I') }}">Chapter 5 (Part 4)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='05-iterations', chapter='5') }}">Chapter 5 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSf_WvabY8xlTbRVNMXcTmuOU758d3f-4XMm06VGsBpYyYcSYA', chapter='5') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='FzpurxjwmsM', chapter_name='C5P1') }}">Chapter 5 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='5QDrj5ogPYc', chapter_name='C5P2') }}">Chapter 5 (Part 2)</a>
+        <a href="{{ url_for('displayVideo', videoID='xsavQp8hd78', chapter_name='C5P3') }}">Chapter 5 (Part 3)</a>
+        <a href="{{ url_for('displayVideo', videoID='yjlMMwf9Y5I', chapter_name='C5P4') }}">Chapter 5 (Part 4)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='05-iterations', chapter='5', chapter_name='C5S') }}">Chapter 5 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSf_WvabY8xlTbRVNMXcTmuOU758d3f-4XMm06VGsBpYyYcSYA', chapter='5', chapter_name='C5TS') }}">Task Submission Form</a>
         <br> 
       
   </li>
@@ -80,10 +79,10 @@
   <li>Task 6
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='dr98iM4app8') }}">Chapter 6 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='bIFpJ-qZ3Cc') }}">Chapter 6 (Part 2)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='06-strings', chapter='6') }}">Chapter 6 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSee7TjBu8s58fcDERRYzarzshUX3Mw9KxgsBhZS8R9JUfKukQ', chapter='6') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='dr98iM4app8', chapter_name='C6P1') }}">Chapter 6 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='bIFpJ-qZ3Cc', chapter_name='C6P2') }}">Chapter 6 (Part 2)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='06-strings', chapter='6', chapter_name='C6S') }}">Chapter 6 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSee7TjBu8s58fcDERRYzarzshUX3Mw9KxgsBhZS8R9JUfKukQ', chapter='6', chapter_name='C6TS') }}">Task Submission Form</a>
         <br>
 
       
@@ -93,10 +92,10 @@
   <li>Task 7
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='9KJ-XeQ6ZlI') }}">Chapter 7 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='0t4rvnySKR4') }}">Chapter 7 (Part 2)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='07-files', chapter='7') }}">Chapter 7 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSf5sLwKd0aHbThysifXpWcMCXEp4W1tduBwPKfy6pVNxIiklg', chapter='7') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='9KJ-XeQ6ZlI', chapter_name='C7P1') }}">Chapter 7 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='0t4rvnySKR4', chapter_name='C7P2') }}">Chapter 7 (Part 2)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='07-files', chapter='7', chapter_name='C7S') }}">Chapter 7 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSf5sLwKd0aHbThysifXpWcMCXEp4W1tduBwPKfy6pVNxIiklg', chapter='7', chapter_name='C7TS') }}">Task Submission Form</a>
         <br>
       
   </li>
@@ -105,11 +104,11 @@
 <li>Task 8
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='ljExWqnWQvo') }}">Chapter 8 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='bV1FQUBIApM') }}">Chapter 8 (Part 2)</a>
-        <a href="{{ url_for('displayVideo', videoID='GxADdpo6EP4') }}">Chapter 8 (Part 3)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='08-lists', chapter='8') }}">Chapter 8 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSfn2IHCLLyg7aDJaQYW_rl43pB_w62nyHqvaotAdMep3f74Iw', chapter='8') }}">Task Submission Form</a> 
+        <a href="{{ url_for('displayVideo', videoID='ljExWqnWQvo', chapter_name='C8P1') }}">Chapter 8 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='bV1FQUBIApM', chapter_name='C8P2') }}">Chapter 8 (Part 2)</a>
+        <a href="{{ url_for('displayVideo', videoID='GxADdpo6EP4', chapter_name='C8P3') }}">Chapter 8 (Part 3)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='08-lists', chapter='8', chapter_name='C8S') }}">Chapter 8 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSfn2IHCLLyg7aDJaQYW_rl43pB_w62nyHqvaotAdMep3f74Iw', chapter='8', chapter_name='C8TS') }}">Task Submission Form</a> 
         <br>
     
   </li>
@@ -118,11 +117,11 @@
 <li>Task 9
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='yDDRMb-1cxI') }}">Chapter 9 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='LRSIuH94XM4') }}">Chapter 9 (Part 2)</a>
-        <a href="{{ url_for('displayVideo', videoID='ZDjiFB1Ib84') }}">Chapter 9 (Part 3)</a>    
-        <a href="{{ url_for('displayExercise', exerciseID='09-dictionaries', chapter='9') }}">Chapter 9 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLSfUCDFyobvVIX33JI-J7K2cz6dsy3WU63Jt68oWVN-SZefFew', chapter='9') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='yDDRMb-1cxI', chapter_name='C9P1') }}">Chapter 9 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='LRSIuH94XM4', chapter_name='C9P2') }}">Chapter 9 (Part 2)</a>
+        <a href="{{ url_for('displayVideo', videoID='ZDjiFB1Ib84', chapter_name='C9P3') }}">Chapter 9 (Part 3)</a>    
+        <a href="{{ url_for('displayExercise', exerciseID='09-dictionaries', chapter='9', chapter_name='C9S') }}">Chapter 9 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLSfUCDFyobvVIX33JI-J7K2cz6dsy3WU63Jt68oWVN-SZefFew', chapter='9', chapter_name='C9TS') }}">Task Submission Form</a>
         <br>
 
      
@@ -132,10 +131,10 @@
 <li>Task 10
       
          <br><br>
-        <a href="{{ url_for('displayVideo', videoID='CaVhM65wD6g') }}">Chapter 10 (Part 1)</a>
-        <a href="{{ url_for('displayVideo', videoID='FdUdA6o0Ij0') }}">Chapter 10 (Part 2)</a>
-        <a href="{{ url_for('displayExercise', exerciseID='10-tuples', chapter='10') }}">Chapter 10 Summary</a>
-        <a href="{{ url_for('submitExercise', formID='1FAIpQLScaDjReOcrEYEPuNDuYi5c6kpBnc1-3qrVBWem0_0CiLqKvUw', chapter='10') }}">Task Submission Form</a>
+        <a href="{{ url_for('displayVideo', videoID='CaVhM65wD6g', chapter_name='C10P1') }}">Chapter 10 (Part 1)</a>
+        <a href="{{ url_for('displayVideo', videoID='FdUdA6o0Ij0', chapter_name='C10P2') }}">Chapter 10 (Part 2)</a>
+        <a href="{{ url_for('displayExercise', exerciseID='10-tuples', chapter='10', chapter_name='C10S') }}">Chapter 10 Summary</a>
+        <a href="{{ url_for('submitExercise', formID='1FAIpQLScaDjReOcrEYEPuNDuYi5c6kpBnc1-3qrVBWem0_0CiLqKvUw', chapter='10', chapter_name='C10TS') }}">Task Submission Form</a>
         <br>
 
 </li>

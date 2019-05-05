@@ -1,23 +1,33 @@
 {% extends "base.html" %}
 {% from "show_chapters.html" import show_chapters %}
+{% from "show_progress.html" import show_progress %}
 {% from "show_top_menu.html" import show_top_menu %}
 
 {% block title %} Chapters {% endblock %}
+
+
 
 {% block top_menu %}
          {{ show_top_menu(user) }}
 {% endblock %}
 
 
+
 {% block nav %}
+
+	{{ show_progress(progress) }}
+
     {{ show_chapters() }}   
+
 {% endblock %}
 
 
 {% block body %}
 
+      
+
   <div class="main">
-    <h5><br>Watch the video below.</h5>
+    <h2><br>Watch the video below.</h2>
     
     <div class="iframe-container">
     	<iframe src="https://www.youtube.com/embed/{{ videoID }}" name="iframe_a" allowfullscreen></iframe>

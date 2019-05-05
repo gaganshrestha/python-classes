@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "show_chapters.html" import show_chapters %}
+{% from "show_progress.html" import show_progress %}
 {% from "show_top_menu.html" import show_top_menu %}
 
 {% block title %} Submit Form {% endblock %}
@@ -11,7 +12,11 @@
 
 
 {% block nav %}
+
+    {{ show_progress(progress) }}
+
     {{ show_chapters() }}   
+
 {% endblock %}
 
 
@@ -19,9 +24,9 @@
 
   <div class="main">
 
-    <h5><br>Submit the form below with your answers for Chapter {{ chapter }} exercises.
+    <h2><br>Submit the form below with your answers for Chapter {{ chapter }} exercises.
     	
-    </h5>    
+    </h2>    
     
      <div style="font-size: 18px">The questions are taken from the chapter summary page. Click on <b>Chapter {{ chapter }} Summary</b> link in the left navigation bar for reference and details.</div>
      <br>

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "show_chapters.html" import show_chapters %}
+{% from "show_progress.html" import show_progress %}
 {% from "show_top_menu.html" import show_top_menu %}
 
 {% block title %} Exercises {% endblock %}
@@ -11,7 +12,13 @@
 
 
 {% block nav %}
+
+    {{ show_progress(progress) }}
+
+
     {{ show_chapters() }}   
+
+
 {% endblock %}
 
 
@@ -20,10 +27,10 @@
  
   <div class="main">
 
-    <h5><br>Below is the Chapter {{ chapter }} Summary.
+    <h2><br>Below is the Chapter {{ chapter }} Summary.
     	<br>
     	
-    </h5>    
+    </h2>    
     
            
  	<div class="iframe-container">
