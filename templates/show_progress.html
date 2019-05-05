@@ -1,0 +1,12 @@
+{% macro show_progress(progress) %}
+
+  <br>
+  <center><font color='white'>Course Progress</font></center>
+
+  <div class="w3-light-grey">
+  <div id="myBar" class="w3-container w3-green" style="height:24px;width:{{progress}}%"></div>
+  </div>
+  
+  <center><font color='white'>{{progress}}%</font></center>
+
+{% endmacro %}

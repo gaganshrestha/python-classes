@@ -28,3 +28,21 @@ class User(UserMixin, db.Model):
 		db.session.add(new_user)
 		db.session.commit()
 
+
+class ChapterProgress(UserMixin, db.Model):
+
+	__tablename__ = "chapter_progress"
+
+	user_name = db.Column(db.String(45), primary_key=True, nullable=False)
+	chapter_name = db.Column(db.String(45), nullable=False)
+
+	def get_user(self):
+		return self.user_name
+
+	def get_chapter(self):
+		return self.chapter_name
+
+	def add_progress(_username, _chaptername):
+		new_entry = ChapterProgress(user_name=_username, chapter_name=_chaptername)
+		db.session.add(new_entry)
+		db.session.commit()

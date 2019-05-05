@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "show_chapters.html" import show_chapters %}
+{% from "show_progress.html" import show_progress %}
 {% from "show_top_menu.html" import show_top_menu %}
 
 {% block title %} Pre-work {% endblock %}
@@ -11,7 +12,11 @@
 
 
 {% block nav %}
+
+    {{ show_progress(progress) }}
+
     {{ show_chapters() }}   
+
 {% endblock %}
 
 
@@ -19,11 +24,10 @@
 
   <div class="main">
 
-    <h5><br>Please install the following components needed for the course.
-    	<br><br>
-    	<span class="notbold"><font size="3">Click the links below to install the components.</font>
-    	</span>
-    </h5>    
+    <h2><br>Please install the following components needed for the course.</h2>   
+    	
+    	<span class="notbold"><font size="4">Click the links below to install the components.</font></span>
+    	  
     
     <ol>
 
