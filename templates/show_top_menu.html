@@ -3,7 +3,7 @@
 
     {% if user %}
         <a href="{{ url_for('homepage') }}">Home</a>
-        <a href="{{ url_for('prework', chapter_name='prework') }}">Tasks</a>
+        <a href="{{ url_for('task_landing') }}">Tasks</a>
        
         <a href="{{ url_for('logout') }}" style="float: right">&nbsp;&nbsp;&nbsp;Logout&nbsp;&nbsp;&nbsp;</a>
         <a href="{{ url_for('homepage') }}" style="float: right">Welcome, {{ user }}</a>
