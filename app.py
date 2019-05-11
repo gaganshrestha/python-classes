@@ -208,6 +208,18 @@ def prework(chapter_name):
 
 
 
+@app.route('/task_landing', methods=['GET'])
+@login_required
+def task_landing():
+	
+	if not current_user.is_authenticated:
+		return redirect(url_for('login'))
+
+	
+	progress = get_progress(current_user.name)
+
+	return render_template('task_landing.html', user=current_user.name, progress=progress)
+
 
 
 

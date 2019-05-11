@@ -4,7 +4,9 @@
   <center><font color='white'>Course Progress</font></center>
 
   <div class="w3-light-grey">
-  <div id="myBar" class="w3-container w3-green" style="height:24px;width:{{progress}}%"></div>
+    {% if progress > 0 %}
+         <div id="myBar" class="w3-container w3-green" style="height:24px;width:{{progress}}%"></div>
+    {% endif %}
   </div>
   
   <center><font color='white'>{{progress}}%</font></center>
